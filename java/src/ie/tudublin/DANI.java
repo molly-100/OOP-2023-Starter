@@ -7,7 +7,7 @@ import processing.core.PApplet;
 public class DANI extends PApplet {
 
 	// Create Array list
-	ArrayList<<Follow>> follow = new ArrayList<<Follow>>;
+	ArrayList<Follow> stars = new ArrayList<Follow>();
 	
 
 	public void settings() {
@@ -24,8 +24,7 @@ public class DANI extends PApplet {
 
 	public void setup() {
 		colorMode(HSB);
-
-       
+		
 	}
 
 	public void keyPressed() {
@@ -42,5 +41,28 @@ public class DANI extends PApplet {
 		textSize(20);
         textAlign(CENTER, CENTER);
         
+	}
+
+	public void loadFile()
+	{
+		loadStrings("small.txt");
+		split(line, ' ');
+		w.replaceAll("[^\\w\\s]","");
+		s.toLowerCase()
+	}
+
+	public void findWord()
+	{
+
+	}
+
+	public void displayModel()
+	{
+
+	}
+
+	public void writeSonnet()
+	{
+		
 	}
 }
