@@ -1,9 +1,6 @@
 package ie.tudublin;
 
 import java.util.ArrayList;
-
-import javax.lang.model.util.ElementScanner14;
-
 import processing.core.PApplet;
 
 public class DANI extends PApplet {
@@ -59,7 +56,6 @@ public class DANI extends PApplet {
 		int word_exists;
 		int follow_exists;
 
-		line = loadStrings("small.txt");
 
 		for(int i = 0; i < line.length; i++)
 		{

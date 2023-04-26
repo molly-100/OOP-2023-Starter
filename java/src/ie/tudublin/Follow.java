@@ -4,7 +4,8 @@ import processing.core.PApplet;
 import java.util.ArrayList;
 
 
-public class Follow {
+public class Follow 
+{
     
     public String word;
     public int count = 0;
@@ -15,20 +16,15 @@ public class Follow {
         this.count = count;
     }
 
-    public Follow()
-    {
-        this(row.getString("word"), row.getInt("count"));
-
-    }
 
     public void setWord(String word)
     {
-        this.word;
+        this.word = word;
     }
 
     public void setWord(int count)
     {
-        this.count;
+        this.count = count;
     }
 
     public int getCount()
