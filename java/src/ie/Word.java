@@ -1,15 +1,16 @@
 package ie;
 
 import java.util.ArrayList;
+import ie.tudublin.Follow;
 
 public class Word {
 
     public String word;
     public int count = 0;
 
-    ArrayList[] follArrayList;
+    ArrayList[] follow_ArrayList;
 
-    public void Word(String word, ArrayList follow_ArrayList)
+    public void Word(String word, Follow follow_ArrayList)
     {
         this.word = word;
         this.follow_ArrayList = follow_ArrayList;
@@ -22,7 +23,7 @@ public class Word {
 
     public String toString()
     {
-        return follow_ArrayList["This string "];
+        return "Word = " + word +  " " + follArrayList.String getWord() + "(" + follow_ArrayList.getCount()+  ")";
     }
     
 }

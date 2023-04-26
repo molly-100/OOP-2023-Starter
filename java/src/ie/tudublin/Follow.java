@@ -23,6 +23,7 @@ public class Follow {
 
     }
 
+
     public void setWord(String word)
     {
         this.word;

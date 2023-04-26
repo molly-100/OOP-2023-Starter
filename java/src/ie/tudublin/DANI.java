@@ -7,7 +7,7 @@ import processing.core.PApplet;
 public class DANI extends PApplet {
 
 	// Create Array list
-	ArrayList<Follow> stars = new ArrayList<Follow>();
+	ArrayList<Follow> follow  = new ArrayList<Follow>();
 	
 
 	public void settings() {
@@ -56,13 +56,14 @@ public class DANI extends PApplet {
 
 	}
 
-	public void displayModel()
+	public void printModel()
 	{
-
+		for(int i = 0; i < follow.size(); i++)
+		{
+			System.out.println(follow.get(i));
+		}
 	}
 
-	public void writeSonnet()
-	{
-		
-	}
+ 
+
 }
