@@ -53,29 +53,37 @@ public class DANI extends PApplet {
 		String[] w;
 		int word_exists;
 		int follow_exists;
+		int count = 0;
 
 		line = loadStrings("small.txt");
 		for(int i = 0; i < line.length; i++)
 		{
 			split(line[i], ' ');
 			String s = w[i].replaceAll("[^\\w\\s]","");
+			split(s);
+			count = replaceAll("[^\\w\\s]","");
 			word_exists = findWord(s);
 			follow_exists = findFollow(s);
 
 			if(word_exists == 0)
 			{
 				s.toLowerCase();
-				Follow();
+				Follow(s, count);
 			}
 
 			if(follow_exists == 0)
 			{
 				s.toLowerCase();
-				Word();
+				Word(s);
 			}
 			
-		}
-		
+		}      
+
+	}
+
+	public void add()
+	{
+
 	}
 
 	public int findFollow(String str)

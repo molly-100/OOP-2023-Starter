@@ -16,11 +16,7 @@ public class Word {
         this.follow_ArrayList = follow_ArrayList;
     }
 
-    public void sort()
-    {
-        
-    }
-
+    
     public String getMainWord(Table row)
     {
         return word;
