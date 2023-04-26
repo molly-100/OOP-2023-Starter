@@ -16,6 +16,14 @@ public class Word {
         this.follow_ArrayList = follow_ArrayList;
     }
 
+    public void loadFile()
+    {
+        ArrayList[] arr = loadFile("small.txt");
+
+      
+
+    }
+
     public void sort()
     {
 
@@ -23,7 +31,7 @@ public class Word {
 
     public String toString()
     {
-        return "Word = " + word +  " " + follArrayList.String getWord() + "(" + follow_ArrayList.getCount()+  ")";
+        return "Word = " + word +  " count = " + count;
     }
     
 }

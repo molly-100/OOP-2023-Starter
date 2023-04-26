@@ -2,6 +2,8 @@ package ie.tudublin;
 
 import java.util.ArrayList;
 
+import javax.lang.model.util.ElementScanner14;
+
 import processing.core.PApplet;
 
 public class DANI extends PApplet {
@@ -29,6 +31,11 @@ public class DANI extends PApplet {
 
 	public void keyPressed() {
 
+		if(keyCode = )
+		{
+			writeSonnet();
+		}
+
 	}
 
 	float off = 0;
@@ -40,20 +47,74 @@ public class DANI extends PApplet {
 		noStroke();
 		textSize(20);
         textAlign(CENTER, CENTER);
+		loadFile();
+		printModel();
         
 	}
 
 	public void loadFile()
 	{
-		loadStrings("small.txt");
-		split(line, ' ');
-		w.replaceAll("[^\\w\\s]","");
-		s.toLowerCase()
+		String[] line;
+		String[] w;
+		int word_exists;
+		int follow_exists;
+
+		line = loadStrings("small.txt");
+
+		for(int i = 0; i < line.length; i++)
+		{
+			split(line[i], ' ');
+			String s = w[i].replaceAll("[^\\w\\s]","");
+			word_exists = findWord(s);
+			follow_exists = findFollow(s);
+
+			if(word_exists == 0 && follow_exists == 0)
+			{
+				s.toLowerCase();
+				Follow Follow();
+			}
+			
+		}
+		
 	}
 
-	public void findWord()
+	public int findFollow(String str)
 	{
+		int x = 0;
 
+		for(int i = 0; i < follow.size(); i++)
+		{
+			if(str != Word follow.get(i))
+			{
+				x = 0;
+			}
+			else{
+				x = 1;
+			}
+
+		}
+
+		return x;
+	}
+
+
+	public int findWord(String str)
+	{
+		int x = 0;
+
+		for(int i = 0; i < follow.size(); i++)
+		{
+			if(str != Word follow.get(i))
+			{
+				x = 0;
+			}
+			else{
+				x = 1;
+			}
+
+		}
+
+		return x;
 	}
 
 	public void printModel()

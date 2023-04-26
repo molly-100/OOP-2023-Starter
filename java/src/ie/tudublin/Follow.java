@@ -1,28 +1,25 @@
 package ie.tudublin;
 
 import processing.core.PApplet;
-import processing.data.TableRow;
 import java.util.ArrayList;
 
 
 public class Follow {
     
-    private String word;
-    private int count = 0;
+    public String word;
+    public int count = 0;
 
-    public void Follow(String word, Int count)
+    public Follow(String word, int count)
     {
         this.word = word;
         this.count = count;
-
     }
 
-    public Follow(TableRow row)
+    public Follow()
     {
-        this(p.getString("word"), p.getInt("count"));
+        this(row.getString("word"), row.getInt("count"));
 
     }
-
 
     public void setWord(String word)
     {
@@ -44,9 +41,9 @@ public class Follow {
        return  word;
     }
 
-
-    public toString String()
+    
+    public String toString()
     {
-        return obj["This string " + ""];
+        return "Following word = " + word + "(" + count + ")";
     }
 }
