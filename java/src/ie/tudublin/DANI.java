@@ -6,6 +6,8 @@ import processing.core.PApplet;
 
 public class DANI extends PApplet {
 
+	// Create Array list
+	ArrayList<<Follow>> follow = new ArrayList<<Follow>>;
 	
 
 	public void settings() {
