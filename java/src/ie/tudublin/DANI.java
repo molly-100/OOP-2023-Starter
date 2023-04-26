@@ -8,7 +8,6 @@ public class DANI extends PApplet {
 	// Create Array list
 	ArrayList<Follow> follow  = new ArrayList<Follow>();
 	
-
 	public void settings() {
 		size(1000, 1000);
 		//fullScreen(SPAN);
@@ -28,11 +27,10 @@ public class DANI extends PApplet {
 
 	public void keyPressed() {
 
-		if(keyCode = )
+		if(keyPressed = " ")
 		{
 			writeSonnet();
 		}
-
 	}
 
 	float off = 0;
@@ -56,7 +54,7 @@ public class DANI extends PApplet {
 		int word_exists;
 		int follow_exists;
 
-
+		line = loadStrings("small.txt");
 		for(int i = 0; i < line.length; i++)
 		{
 			split(line[i], ' ');
@@ -64,10 +62,16 @@ public class DANI extends PApplet {
 			word_exists = findWord(s);
 			follow_exists = findFollow(s);
 
-			if(word_exists == 0 && follow_exists == 0)
+			if(word_exists == 0)
 			{
 				s.toLowerCase();
-				Follow Follow();
+				Follow();
+			}
+
+			if(follow_exists == 0)
+			{
+				s.toLowerCase();
+				Word();
 			}
 			
 		}
@@ -80,7 +84,7 @@ public class DANI extends PApplet {
 
 		for(int i = 0; i < follow.size(); i++)
 		{
-			if(str != Word follow.get(i))
+			if(str != Follow follow_ArrayList.get(i))
 			{
 				x = 0;
 			}
@@ -100,7 +104,7 @@ public class DANI extends PApplet {
 
 		for(int i = 0; i < follow.size(); i++)
 		{
-			if(str != Word follow.get(i))
+			if(str != Word follow_ArrayList.get(i))
 			{
 				x = 0;
 			}
@@ -120,7 +124,5 @@ public class DANI extends PApplet {
 			System.out.println(follow.get(i));
 		}
 	}
-
- 
 
 }

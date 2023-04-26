@@ -8,7 +8,7 @@ public class Word {
     public String word;
     public int count = 0;
 
-    ArrayList[] follow_ArrayList;
+    ArrayList follow_ArrayList;
 
     public void Word(String word, Follow follow_ArrayList)
     {
@@ -18,14 +18,24 @@ public class Word {
 
     public void sort()
     {
+        
+    }
 
+    public String getMainWord(Table row)
+    {
+        return word;
+    }
+
+    public ArrayList getListFollows()
+    {
+        return follow_ArrayList;
     }
 
     public String toString()
     {
         for(int i = 0; i < follow_ArrayList.length; i++)
         {
-            return word + ": " +  get(i).follow_ArrayList + " (" + count + ")";
+            return word + ": " +  follow_ArrayList.get(i) + " (" + count + ")";
         }
        
     }
